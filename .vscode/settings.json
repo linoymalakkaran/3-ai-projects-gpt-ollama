@@ -1,0 +1,17 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/${workspaceFolderBasename}/.venv/Scripts/python.exe",
+    "python.terminal.activateEnvironment": true,
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/project1",
+        "${workspaceFolder}/project2",
+        "${workspaceFolder}/project3"
+    ],
+    "files.associations": {
+        "*.toml": "toml"
+    },
+    "terminal.integrated.cwd": "${workspaceFolder}",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true
+}

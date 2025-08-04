@@ -1,0 +1,57 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Project1 - AI Chatbot",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/project1",
+      "module": "streamlit",
+      "args": ["run", "main.py", "--server.port", "8501"],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "python": "${workspaceFolder}/project1/.venv/Scripts/python.exe",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/project1"
+      }
+    },
+    {
+      "name": "Debug Project2 - Resume Critiquer",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/project2",
+      "module": "streamlit",
+      "args": ["run", "main.py", "--server.port", "8502"],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "python": "${workspaceFolder}/project2/.venv/Scripts/python.exe",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/project2"
+      }
+    },
+    {
+      "name": "Debug Project3 - Image classifier",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/project3",
+      "module": "streamlit",
+      "args": ["run", "main.py", "--server.port", "8503"],
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "python": "${workspaceFolder}/project3/.venv/Scripts/python.exe",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/project3"
+      }
+    },
+    {
+      "name": "Debug Current File (Auto-detect UV env)",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": true,
+      "python": "${command:python.interpreterPath}",
+      "cwd": "${fileDirname}"
+    }
+  ]
+}

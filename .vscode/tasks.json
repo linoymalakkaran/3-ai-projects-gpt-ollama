@@ -1,0 +1,61 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Project1 Chatbot App",
+            "type": "shell",
+            "command": "uv",
+            "args": ["run", "streamlit", "run", "main.py"],
+            "options": {
+                "cwd": "${workspaceFolder}/project1"
+            },
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Run Project2 Resume App",
+            "type": "shell",
+            "command": "uv",
+            "args": ["run", "streamlit", "run", "main-chatgpt.py"],
+            "options": {
+                "cwd": "${workspaceFolder}/project2"
+            },
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Install Dependencies - Current Project",
+            "type": "shell",
+            "command": "uv",
+            "args": ["sync"],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": "build"
+        },
+        {
+            "label": "Install Dependencies - All Projects",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "Get-ChildItem -Directory | Where-Object { Test-Path (Join-Path $_.FullName 'pyproject.toml') } | ForEach-Object { Write-Host \"Installing dependencies for $($_.Name)...\"; Set-Location $_.FullName; uv sync; Set-Location .. }"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always"
+            }
+        }
+    ]
+}
