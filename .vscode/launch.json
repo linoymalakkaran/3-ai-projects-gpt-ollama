@@ -2,12 +2,11 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug Project1 - AI Chatbot",
+      "name": "Debug Project1 - AI Chatbot with tools",
       "type": "python",
       "request": "launch",
       "cwd": "${workspaceFolder}/project1",
-      "module": "streamlit",
-      "args": ["run", "main.py", "--server.port", "8501"],
+      "program": "${workspaceFolder}/project1/main.py",
       "console": "integratedTerminal",
       "justMyCode": true,
       "python": "${workspaceFolder}/project1/.venv/Scripts/python.exe",
